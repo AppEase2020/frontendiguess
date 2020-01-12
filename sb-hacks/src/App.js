@@ -8,7 +8,7 @@ import { LinkContainer } from "react-router-bootstrap";
 function App(props) {
   return (
     <div className="App container">
-      <Navbar fluid collapseOnSelect>
+      <Navbar fluid collapseOnSelect inverse='true'>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">AppEase</Link>
