@@ -21,7 +21,7 @@ function App(props) {
               <NavItem>Signup</NavItem>
             </LinkContainer>
             <LinkContainer to="/login">
-              <NavItem>Login</NavItem>
+              <NavItem>Login/Logout</NavItem>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
-export default function offerParking(props) {
+export default function storageOffer(props) {
   //const [email, setEmail] = useState("");
   //const [password, setPassword] = useState("");
 
@@ -16,7 +16,7 @@ export default function offerParking(props) {
       object[key] = value;
     });
     const json = JSON.stringify(object);
-    const response = await fetch('http://localhost:3000/api/parkingListings', {method: 'POST', headers: {'Content-Type': 'application/json', 'x-auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTFhYzYzZjU1MjkwNDVkYTQzNWZjZjIiLCJpYXQiOjE1Nzg4MjYwNjcsImV4cCI6MTU3ODkxMjQ2N30.0QVsp2P9-Z9Y43jzIM3liDJAFiL6sQg7KFu84X3j3f8'}, body: json});
+    const response = await fetch('http://localhost:3000/api/storageListings', {method: 'POST', headers: {'Content-Type': 'application/json', 'x-auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTFhYzYzZjU1MjkwNDVkYTQzNWZjZjIiLCJpYXQiOjE1Nzg4MjYwNjcsImV4cCI6MTU3ODkxMjQ2N30.0QVsp2P9-Z9Y43jzIM3liDJAFiL6sQg7KFu84X3j3f8'}, body: json});
     //const jsonResponse = await response.json();
     console.log(response);
     if(response.status === 200){
@@ -85,11 +85,11 @@ export default function offerParking(props) {
           />
         </FormGroup>
         <FormGroup controlId="radioGroup">
-          <ControlLabel>Number of Spots</ControlLabel>
+          <ControlLabel>Amount Of Space (cubic meters)</ControlLabel>
           <FormControl
             autoFocus
             type="number"
-            name="numberOfSpots"
+            name="amountOfSpace"
             //value={text}
             //onChange={e => setEmail(e.target.value)}
           />
